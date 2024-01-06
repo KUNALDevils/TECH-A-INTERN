@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  padding: 10px;
+}
+
+.todoapp {
+  width: 100%;
+  max-width: 100vh;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 100px auto 20px;
+  padding: 40px 30px 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+img {
+  width: 40px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: rgba(160, 162, 171, 0.63);
+}
+input {
+  font-weight: 100px;
+  font-size: medium;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+button {
+  background-color: rgb(237, 71, 10);
+  border-radius: 30px;
+  width: 80px;
+  padding: 10px;
+  height: auto;
+  border: none;
+  color: rgb(11, 11, 11);
+  font-size: 16px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 14px 8px 12px 50px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: url(./img/uncheck-32.png);
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: red;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(./img/check-mark-11-32.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  color: red;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background-color: rgb(216, 216, 218);
+}
